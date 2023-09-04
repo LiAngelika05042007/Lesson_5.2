@@ -1,8 +1,6 @@
 package com.angelika.lesson_52.ui.fragments.addmanhwa
 
-import android.opengl.Visibility
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,11 +8,8 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.angelika.lesoon_52.R
 import com.angelika.lesoon_52.databinding.FragmentAddManhwaBinding
-import com.angelika.lesoon_52.databinding.FragmentManhwaBinding
 import com.angelika.lesson_52.models.Manhwa
-import com.angelika.lesson_52.ui.fragments.listmanhwa.ManhwaFragment
 
 class AddManhwaFragment : Fragment() {
 

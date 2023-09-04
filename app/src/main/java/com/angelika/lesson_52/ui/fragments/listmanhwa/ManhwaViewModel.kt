@@ -5,9 +5,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.angelika.lesson_52.models.Manhwa
-import com.angelika.lesson_52.models.repositories.ManhwaRepository
+import com.angelika.lesson_52.data.repositories.ManhwaRepository
 
 class ManhwaViewModel: ViewModel() {
+
     private val repository = ManhwaRepository()
 
     private val _manhwaLiveData = MutableLiveData(ManwhaUiState())
@@ -23,7 +24,6 @@ class ManhwaViewModel: ViewModel() {
             },3000
         )
     }
-
 }
 data class ManwhaUiState(
     val isLoading: Boolean = true,

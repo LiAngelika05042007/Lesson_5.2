@@ -11,9 +11,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.angelika.lesoon_52.R
 import com.angelika.lesoon_52.databinding.FragmentManhwaBinding
-import com.angelika.lesson_52.models.Manhwa
 import com.angelika.lesson_52.ui.adapters.ManhwaAdapter
-import com.angelika.lesson_52.ui.fragments.addmanhwa.AddManhwaViewModel
 
 class ManhwaFragment : Fragment() {
 
@@ -21,7 +19,6 @@ class ManhwaFragment : Fragment() {
     private val binding get()  = _binding!!
     private val manhwaAdapter = ManhwaAdapter()
     private val viewModel by viewModels<ManhwaViewModel>()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,14 +52,14 @@ class ManhwaFragment : Fragment() {
         }
     }
 
-    private fun getManhwas() {
-        viewModel.getManhwas()
-    }
-
     private fun transition() = with(binding){
         btnAdd.setOnClickListener {
             findNavController().navigate(R.id.action_manhwaFragment_to_addManhwaFragment)
         }
+    }
+
+    private fun getManhwas() {
+        viewModel.getManhwas()
     }
 
     override fun onDestroyView() {

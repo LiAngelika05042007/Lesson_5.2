@@ -2,7 +2,7 @@ package com.angelika.lesson_52.ui.fragments.addmanhwa
 
 import androidx.lifecycle.ViewModel
 import com.angelika.lesson_52.models.Manhwa
-import com.angelika.lesson_52.models.repositories.ManhwaRepository
+import com.angelika.lesson_52.data.repositories.ManhwaRepository
 
 class AddManhwaViewModel: ViewModel() {
 
